@@ -1,0 +1,198 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "rich_text_dmgWbY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CKfyzE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop West Coast Jewelry Co",
+            "heading_size": "h0"
+          }
+        },
+        "text_6LTthF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hand selected, luxury pieces</p>"
+          }
+        },
+        "button_c4hLBE": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Contact to be notified when we launch",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CKfyzE",
+        "text_6LTthF",
+        "button_c4hLBE"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "top_border_thickness": 0,
+        "bottom_border_thickness": 0,
+        "border_color": "#000000",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "collection_list_4TxV6Q": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_3kxPLg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "necklaces"
+          }
+        },
+        "featured_collection_bmDmDh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "featured_collection_6kFMXf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "featured_collection_d3LNRU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_3kxPLg",
+        "featured_collection_bmDmDh",
+        "featured_collection_6kFMXf",
+        "featured_collection_d3LNRU"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "top_border_thickness": 0,
+        "bottom_border_thickness": 0,
+        "border_color": "#000000",
+        "title": "Collections",
+        "heading_size": "h0",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-5",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_8fReBJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_P7VdeQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop The Full Collection",
+            "heading_size": "h1"
+          }
+        },
+        "text_MBEWTR": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_gGQc8E": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_P7VdeQ",
+        "text_MBEWTR",
+        "button_gGQc8E"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "top_border_thickness": 0,
+        "bottom_border_thickness": 0,
+        "border_color": "#ffffff",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "top_border_thickness": 1,
+        "bottom_border_thickness": 0,
+        "border_color": "#000000",
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "rich_text_dmgWbY",
+    "collection_list_4TxV6Q",
+    "rich_text_8fReBJ",
+    "product-grid"
+  ]
+}

@@ -1,0 +1,316 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_gigc8n": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ATeeCx": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR STORY",
+            "heading_size": "h1"
+          }
+        },
+        "text_KmGJzL": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>At Modern Muse, we set out to redefine contemporary luxury — blending heritage craftsmanship with a modern sensibility. Our collections celebrate quiet confidence, exquisite tailoring, and materials chosen for their rarity and integrity. Each piece is designed to be an enduring part of your wardrobe, transcending fleeting trends.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_JN7yJa": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ATeeCx",
+        "text_KmGJzL",
+        "button_JN7yJa"
+      ],
+      "custom_css": [],
+      "settings": {
+        "top_border_thickness": 1,
+        "bottom_border_thickness": 1,
+        "border_color": "#000000",
+        "image": "shopify://shop_images/Product_Image_6.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_X6w9NM": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_pdxNrd": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Commitment to Style",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_PqDz84": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pdxNrd",
+        "buttons_PqDz84"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "top_border_thickness": 1,
+        "bottom_border_thickness": 1,
+        "border_color": "#000000",
+        "show_on_device": "show-all-devices",
+        "image": "shopify://shop_images/About-Parallax_754a27da-f0c1-4e85-9b2b-a6373731a692.png",
+        "image_overlay_opacity": 30,
+        "image_height": "large",
+        "image_behavior": "fixed",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "image_with_text_DaAP6X": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_XieNHt": {
+          "type": "heading",
+          "settings": {
+            "heading": "CRAFT, CULTURE, CREATION",
+            "heading_size": "h1"
+          }
+        },
+        "text_j6Uw6P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every piece in our collection is thoughtfully designed to transcend seasons and trends, becoming an enduring staple in the modern wardrobe. We partner with skilled artisans and trusted ateliers who share our values of quality, ethical practices, and attention to detail. From ethically sourced fabrics to consciously crafted garments, sustainability is woven into the very fabric of our brand.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Hb7HaN": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XieNHt",
+        "text_j6Uw6P",
+        "button_Hb7HaN"
+      ],
+      "settings": {
+        "top_border_thickness": 1,
+        "bottom_border_thickness": 1,
+        "border_color": "#000000",
+        "image": "shopify://shop_images/less-grain_32.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_CdErck": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PFjdKC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Product_Image.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iMTqRp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Product_Image_14.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cGzYiU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Product_Image_18.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_PFjdKC",
+        "column_iMTqRp",
+        "column_cGzYiU"
+      ],
+      "custom_css": [],
+      "settings": {
+        "top_border_thickness": 0,
+        "bottom_border_thickness": 1,
+        "border_color": "#000000",
+        "enable_column_border": true,
+        "column_border_color": "#000000",
+        "column_border_width": 1,
+        "title": "WHAT PEOPLE SAY",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_tfFVAV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_c6Xzc9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Elevated Fabrics. Uncompromising Quality.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_c6Xzc9"
+      ],
+      "custom_css": [],
+      "settings": {
+        "top_border_thickness": 0,
+        "bottom_border_thickness": 1,
+        "border_color": "#000000",
+        "show_on_device": "show-all-devices",
+        "image": "shopify://shop_images/Modern_Muse_3.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "collection_list_kFzbWY": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_qejEji": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "everyday-chic"
+          }
+        },
+        "featured_collection_L8WtDR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "our-favorites"
+          }
+        },
+        "featured_collection_BqeBPe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "the-muse"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_qejEji",
+        "featured_collection_L8WtDR",
+        "featured_collection_BqeBPe"
+      ],
+      "custom_css": [],
+      "settings": {
+        "top_border_thickness": 0,
+        "bottom_border_thickness": 0,
+        "border_color": "#000000",
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_gigc8n",
+    "image_banner_X6w9NM",
+    "image_with_text_DaAP6X",
+    "multicolumn_CdErck",
+    "image_banner_tfFVAV",
+    "collection_list_kFzbWY"
+  ]
+}

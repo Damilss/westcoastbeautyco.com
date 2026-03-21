@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_6qbkke": {
+      "type": "multirow",
+      "blocks": {
+        "row_iMK8by": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/543A2374.jpg",
+            "caption": "Owner & Founder",
+            "heading": "Amber",
+            "text": "",
+            "button_label": "Book with Amber",
+            "button_link": "http://boujiebeautybenicia.booksy.com/a/"
+          }
+        },
+        "row_UHh8rV": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/image0.jpg",
+            "caption": "",
+            "heading": "Angelina",
+            "text": "<p>Angelina is a registered nurse with over 10 years of bedside experience and the owner of a successful Permanent Makeup Artistry business for the past five years. She is multi-level certified across all aspects of the permanent makeup field. </p><p>With every client, Angelina’s approach is rooted in blending medical expertise with refined artistry, always with the intention of enhancing natural beauty. She is deeply passionate about empowering women through confidence, precision, and aesthetics, and is committed to delivering results that are both balanced and beautiful. She will soon be expanding into advanced aesthetics, believing that beauty deserves both skill and science.</p>",
+            "button_label": "Book with Angelina",
+            "button_link": "https://booksy.com/en-us/718011_west-coast-beauty-co_wellness-day-spa_103417_american-canyon"
+          }
+        },
+        "row_DCUezH": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9226.jpg",
+            "caption": "",
+            "heading": "Cynthia",
+            "text": "<p>Cynthia is a registered nurse and certified aesthetic injector at <strong>West Coast Beauty</strong>, passionate about helping clients feel confident and refreshed. With years of clinical experience and a personalized approach to beauty, she offers advanced aesthetic treatments designed to enhance each client’s natural features.</p><p>Cynthia provides a wide range of services including Botox®, Dysport®, and Xeomin® (neuromodulators), dermal filler, Sculptra®, microneedling, PRP (platelet-rich plasma), chemical peels, PRX treatments, and B12 injections. Whether clients are seeking subtle rejuvenation or a more transformative treatment plan, Cynthia delivers safe, customized care with precision and intention.</p>",
+            "button_label": "Book with Cynthia",
+            "button_link": "https://booksy.com/en-us/718011_west-coast-beauty-co_wellness-day-spa_103417_american-canyon"
+          }
+        },
+        "row_qmNpgU": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/image1.jpg",
+            "caption": "",
+            "heading": "Kate",
+            "text": "<p>Kate is a lash and brow artist at <strong>West Coast Beauty</strong> and a licensed esthetician specializing in eyelash and eyebrow enhancements, as well as face and body waxing. At 22 years old, she has been in the beauty industry for about five years, with five years of experience in lashes and brows and three years specializing in waxing.</p><p>She is proud to be multi-certified by over eight private lash and brow companies. Kate tailors every service, whether lashes, brows, or waxing, to each guest based on their facial features and what will suit them best.</p><p>Her goal at West Coast Beauty is to make every client glow with confidence and leave feeling renewed and beautiful. Feel free to explore her portfolio on Instagram @katebeautyy. Kate looks forward to welcoming you soon.</p>",
+            "button_label": "Book with Kate",
+            "button_link": "https://booksy.com/en-us/718011_west-coast-beauty-co_wellness-day-spa_103417_american-canyon"
+          }
+        },
+        "row_989Mqe": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3845.jpg",
+            "caption": "",
+            "heading": "Theresa",
+            "text": "<p>With over a decade in the beauty industry, Theresa has built a thriving business rooted in expertise, consistency, and genuine connection. As an experienced esthetician at <strong>West Coast Beauty</strong>, she takes immense pride in the relationships she has nurtured, with many loyal clients returning year after year, not just for her skilled work, but for the welcoming environment she creates.</p><p>Theresa believes beauty should feel effortless and timeless, enhancing natural features rather than overpowering them. Her meticulous attention to detail and deep understanding of aesthetics ensure every treatment is customized to complement each client’s unique look.</p><p>For Theresa, this career is about more than providing a beauty service, it’s about helping clients feel their absolute best. She has built her reputation on dependability, professionalism, and genuine connection.</p>",
+            "button_label": "Book with Theresa",
+            "button_link": "https://booksy.com/en-us/718011_west-coast-beauty-co_wellness-day-spa_103417_american-canyon"
+          }
+        }
+      },
+      "block_order": [
+        "row_iMK8by",
+        "row_UHh8rV",
+        "row_DCUezH",
+        "row_qmNpgU",
+        "row_989Mqe"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "top_border_thickness": 0,
+        "bottom_border_thickness": 0,
+        "border_color": "#000000",
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multirow_6qbkke"
+  ]
+}
