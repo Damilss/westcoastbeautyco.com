@@ -1,0 +1,164 @@
+.page {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.main {
+  padding: 13rem 2.4rem 8rem;
+}
+
+.pageTitle {
+  margin: 0 auto 5.6rem;
+  max-width: 1160px;
+  text-align: center;
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: clamp(4.8rem, 6vw, 8rem);
+}
+
+.teamSection {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.teamRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.rowReverse .imagePanel {
+  order: 2;
+}
+
+.rowReverse .textPanel {
+  order: 1;
+}
+
+.imagePanel {
+  position: relative;
+  min-height: 46rem;
+  border: 1px solid var(--border);
+  background: #d7c5b4;
+}
+
+.headshot {
+  object-fit: cover;
+}
+
+.textPanel {
+  display: flex;
+  align-items: center;
+  padding: 2.2rem;
+}
+
+.textShell {
+  width: 100%;
+  border: 1px solid rgba(62, 62, 62, 0.22);
+  background: rgba(238, 226, 213, 0.5);
+  padding: 3.8rem 4rem;
+}
+
+.role {
+  margin: 0 0 1.2rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(62, 62, 62, 0.78);
+}
+
+.memberName {
+  margin: 0 0 2.2rem;
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  letter-spacing: 0.008em;
+  font-size: clamp(4.6rem, 3.2vw, 5.8rem);
+}
+
+.description {
+  margin: 0 0 1.4rem;
+  font-size: 1.82rem;
+  line-height: 1.56;
+  color: rgba(62, 62, 62, 0.86);
+}
+
+.description:last-of-type {
+  margin-bottom: 0;
+}
+
+.bookButton {
+  display: inline-block;
+  margin-top: 2.8rem;
+  padding: 1.5rem 2.7rem;
+  border: 1px solid var(--border);
+  font-size: 1.55rem;
+  letter-spacing: 0.02em;
+  background: transparent;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.bookButton:hover {
+  background: rgba(62, 62, 62, 0.08);
+}
+
+@media (max-width: 1100px) {
+  .main {
+    padding-top: 11.6rem;
+  }
+
+  .teamRow {
+    grid-template-columns: 1fr;
+  }
+
+  .rowReverse .imagePanel,
+  .rowReverse .textPanel {
+    order: initial;
+  }
+
+  .imagePanel {
+    min-height: 45rem;
+  }
+
+  .textPanel {
+    padding: 1.2rem 0 1.8rem;
+  }
+}
+
+@media (max-width: 749px) {
+  .main {
+    padding: 10.8rem 1.6rem 5.6rem;
+  }
+
+  .pageTitle {
+    margin-bottom: 3.4rem;
+    font-size: clamp(4rem, 11vw, 5.2rem);
+  }
+
+  .imagePanel {
+    min-height: 34rem;
+  }
+
+  .textShell {
+    padding: 2.6rem 2.2rem;
+  }
+
+  .memberName {
+    font-size: clamp(3.6rem, 9vw, 4.6rem);
+  }
+
+  .description {
+    font-size: 1.65rem;
+  }
+
+  .bookButton {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}

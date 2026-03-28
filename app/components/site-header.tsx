@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "../page.module.css";
 
@@ -10,9 +11,10 @@ type NavLink = {
 
 type SiteHeaderProps = {
   links: NavLink[];
+  activeHref?: string;
 };
 
-export function SiteHeader({ links }: SiteHeaderProps) {
+export function SiteHeader({ links, activeHref }: SiteHeaderProps) {
   const [atTop, setAtTop] = useState(true);
 
   useEffect(() => {
@@ -31,19 +33,28 @@ export function SiteHeader({ links }: SiteHeaderProps) {
   return (
     <header className={`${styles.header} ${atTop ? styles.headerAtTop : styles.headerScrolled}`}>
       <div className={styles.headerInner}>
-        <a href="#" className={styles.brand}>
+        <Link href="/" className={styles.brand}>
           West Coast Beauty Co
-        </a>
+        </Link>
         <nav className={styles.nav} aria-label="Main navigation">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className={link.label === "Home" ? styles.navLinkActive : styles.navLink}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) => {
+            const isActive = link.href === activeHref;
+            const className = isActive ? styles.navLinkActive : styles.navLink;
+
+            if (link.href.startsWith("/")) {
+              return (
+                <Link key={link.label} href={link.href} className={className}>
+                  {link.label}
+                </Link>
+              );
+            }
+
+            return (
+              <a key={link.label} href={link.href} className={className}>
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
         <div className={styles.headerIcons}>
           <SearchIcon />
