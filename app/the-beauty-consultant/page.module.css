@@ -1,0 +1,118 @@
+.page {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.main {
+  padding: 13rem 2.4rem 8rem;
+}
+
+.section {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  border: 1px solid var(--border);
+}
+
+.contentPanel {
+  padding: 6rem 6rem 5.8rem;
+  background: var(--pink);
+}
+
+.title {
+  margin: 0 0 2.6rem;
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: clamp(4.8rem, 3.8vw, 6.2rem);
+}
+
+.copy {
+  margin: 0;
+  max-width: 61ch;
+  color: rgba(62, 62, 62, 0.85);
+  font-size: 1.82rem;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 1.6rem 2.9rem;
+  border: 1px solid var(--charcoal);
+  background: var(--charcoal);
+  color: #fff;
+  font-size: 1.55rem;
+  letter-spacing: 0.03em;
+}
+
+.imagePanel {
+  position: relative;
+  min-height: 58rem;
+  border-left: 1px solid var(--border);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 990px) {
+  .main {
+    padding-top: 11.5rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .contentPanel {
+    padding: 3.2rem 2.4rem 3.4rem;
+  }
+
+  .title {
+    font-size: clamp(4rem, 8vw, 5rem);
+  }
+
+  .copy {
+    font-size: 1.68rem;
+  }
+
+  .imagePanel {
+    min-height: 42rem;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 749px) {
+  .main {
+    padding: 10.8rem 1.6rem 5.6rem;
+  }
+
+  .contentPanel {
+    padding: 2.8rem 2rem 3rem;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+    font-size: clamp(3.5rem, 10vw, 4.4rem);
+  }
+
+  .copy {
+    font-size: 1.58rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .imagePanel {
+    min-height: 35rem;
+  }
+}

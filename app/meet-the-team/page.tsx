@@ -2,16 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
+import { SITE_NAV_LINKS } from "../components/site-nav-links";
 import styles from "./page.module.css";
-
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Book appointment", href: "#" },
-  { label: "Shop", href: "#" },
-  { label: "The Beauty Consultant", href: "#" },
-  { label: "Meet The Team", href: "/meet-the-team" },
-  { label: "Contact", href: "#" },
-];
 
 type TeamMember = {
   name: string;
@@ -99,7 +91,7 @@ export const metadata: Metadata = {
 export default function MeetTheTeamPage() {
   return (
     <div className={styles.page}>
-      <SiteHeader links={NAV_LINKS} activeHref="/meet-the-team" />
+      <SiteHeader links={SITE_NAV_LINKS} activeHref="/meet-the-team" />
 
       <main className={styles.main}>
         <h1 className={styles.pageTitle}>Meet the Team</h1>

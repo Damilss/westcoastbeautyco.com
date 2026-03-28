@@ -1,17 +1,9 @@
 import Image from "next/image";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
+import { SITE_NAV_LINKS } from "./components/site-nav-links";
 import { ScrollReveal } from "./components/scroll-reveal";
 import styles from "./page.module.css";
-
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Book appointment", href: "#" },
-  { label: "Shop", href: "#" },
-  { label: "The Beauty Consultant", href: "#" },
-  { label: "Meet The Team", href: "/meet-the-team" },
-  { label: "Contact", href: "#" },
-];
 
 const STRIP_IMAGES = [
   { src: "/LuxeLinkcombo9.jpg", alt: "Gold jewelry on branch" },
@@ -72,7 +64,7 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <SiteHeader links={NAV_LINKS} activeHref="/" />
+      <SiteHeader links={SITE_NAV_LINKS} activeHref="/" />
 
       <main>
         <section className={styles.heroSection}>
@@ -172,7 +164,7 @@ export default function Home() {
                   Whether you&apos;re launching your first studio or looking to elevate your existing
                   brand, The Beauty Consultant offers the guidance and strategy to help you thrive.
                 </p>
-                <a href="#" className={styles.darkButton}>
+                <a href="/contact" className={styles.darkButton}>
                   BOOK NOW
                 </a>
               </div>
