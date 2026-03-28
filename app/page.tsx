@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SiteHeader } from "./components/site-header";
 import { ScrollReveal } from "./components/scroll-reveal";
 import styles from "./page.module.css";
 
@@ -70,29 +71,7 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <a href="#" className={styles.brand}>
-            West Coast Beauty Co
-          </a>
-          <nav className={styles.nav} aria-label="Main navigation">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className={link.label === "Home" ? styles.navLinkActive : styles.navLink}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-          <div className={styles.headerIcons}>
-            <SearchIcon />
-            <UserIcon />
-            <BagIcon />
-          </div>
-        </div>
-      </header>
+      <SiteHeader links={NAV_LINKS} />
 
       <main>
         <section className={styles.heroSection}>
@@ -102,25 +81,10 @@ export default function Home() {
               alt="West Coast Beauty team"
               fill
               priority
-              className={`${styles.heroImage} ${styles.desktopHero}`}
-              sizes="100vw"
-            />
-            <Image
-              src="/main-page-2.png"
-              alt="West Coast Beauty team"
-              fill
-              priority
-              className={`${styles.heroImage} ${styles.mobileHero}`}
+              className={styles.heroImage}
               sizes="100vw"
             />
             <div className={styles.heroGlow} />
-            <Image
-              src="/logo.png"
-              alt="West Coast Beauty Co logo"
-              width={500}
-              height={138}
-              className={styles.heroLogo}
-            />
           </div>
         </section>
 
@@ -279,33 +243,6 @@ export default function Home() {
         <p className={styles.legal}>© 2026, West Coast Beauty Co</p>
       </footer>
     </div>
-  );
-}
-
-function SearchIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="11" cy="11" r="6.5" />
-      <line x1="16" y1="16" x2="21" y2="21" />
-    </svg>
-  );
-}
-
-function UserIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="12" cy="8" r="3.5" />
-      <path d="M4 20c1.3-3.2 4.2-5 8-5s6.7 1.8 8 5" />
-    </svg>
-  );
-}
-
-function BagIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M5 8h14l-1.2 12H6.2L5 8Z" />
-      <path d="M9 8V6a3 3 0 0 1 6 0v2" />
-    </svg>
   );
 }
 
