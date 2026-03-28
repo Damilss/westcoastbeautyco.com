@@ -2,6 +2,10 @@
 
 This is a Next.js website for West Coast Beauty Co., a beauty and wellness brand. The site is built with Next.js 14, TypeScript, and Tailwind CSS.
 
+## Documentation
+
+- [Instagram Feed Integration](./docs/instagram-feed.md)
+
 ## Repository Structure
 
 ```
@@ -50,3 +54,22 @@ This is a Next.js website for West Coast Beauty Co., a beauty and wellness brand
 - `npm run build` - Build the application for production
 - `npm run start` - Start the production server
 - `npm run lint` - Run ESLint for code quality checks
+
+## Instagram Feed Setup
+
+The home page Instagram section is API-backed with an automatic local fallback.
+
+Detailed implementation and behavior docs:
+- `docs/instagram-feed.md`
+
+1. Copy `.env.example` to `.env.local`
+2. Set:
+   - `INSTAGRAM_ACCESS_TOKEN`
+   - `INSTAGRAM_ACCOUNT_HANDLE` (defaults to `westcoastbeauty.co`)
+3. Optional:
+   - `INSTAGRAM_IG_USER_ID` (if your token flow needs an explicit IG user id)
+   - `INSTAGRAM_FEED_LIMIT` (default `10`, max `20`)
+   - `INSTAGRAM_CACHE_TTL_SECONDS` (default `1800`)
+
+Internal endpoint:
+- `GET /api/instagram/feed?limit=10`
