@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { InstagramFeed } from "./components/instagram-feed";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 import { SITE_NAV_LINKS } from "./components/site-nav-links";
@@ -29,33 +30,6 @@ const TESTIMONIALS = [
     name: "Michelle C.",
     quote:
       "West Coast Beauty Co is an amazing spa! I've been extremely happy with all my treatments from microblading to lash extensions to ear piercing. I felt immediately at ease and taken care of with Amber.",
-  },
-];
-
-const INSTAGRAM_POSTS = [
-  {
-    src: "/Westcoastbeauty-62.jpg",
-    caption: "Honored to be part of the She Drives Women's History event.",
-  },
-  {
-    src: "/Westcoastbeauty-64.jpg",
-    caption: "Talking entrepreneurship and all things beauty industry.",
-  },
-  {
-    src: "/Westcoastbeauty-72.jpg",
-    caption: "Celebrating Women's History Month with confidence and style.",
-  },
-  {
-    src: "/543A2834.jpg",
-    caption: "Something beautiful is blooming at West Coast Beauty Co.",
-  },
-  {
-    src: "/Westcoastbeauty-94.jpg",
-    caption: "New therapist alert. Meet Catherine and say hello.",
-  },
-  {
-    src: "/Westcoastbeauty-48.jpg",
-    caption: "Excited to be part of The Wellness Affair in Oakland.",
   },
 ];
 
@@ -201,24 +175,7 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <section className={styles.instagramSection}>
-            <div className={styles.instagramGrid}>
-              {INSTAGRAM_POSTS.map((post, index) => (
-                <article key={post.src} className={styles.instagramCard}>
-                  <div className={styles.instagramImageWrap}>
-                    <Image
-                      src={post.src}
-                      alt={`Instagram post preview ${index + 1}`}
-                      fill
-                      sizes="(max-width: 900px) 50vw, 16vw"
-                      className={styles.coverImage}
-                    />
-                  </div>
-                  <p className={styles.instagramCaption}>{post.caption}</p>
-                </article>
-              ))}
-            </div>
-          </section>
+          <InstagramFeed limit={10} accountHandle="westcoastbeauty.co" />
         </ScrollReveal>
       </main>
 

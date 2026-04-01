@@ -1,0 +1,275 @@
+.section {
+  border-bottom: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tile {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  padding: 0;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.tileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.videoBadge {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.58);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoBadge svg {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+}
+
+.meta {
+  margin: 1rem auto 1.4rem;
+  max-width: 1100px;
+  color: rgba(62, 62, 62, 0.6);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(23, 20, 21, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.4rem 7rem;
+}
+
+.modal {
+  position: relative;
+  width: min(1080px, calc(100vw - 150px));
+  height: min(86vh, 780px);
+  display: grid;
+  grid-template-columns: minmax(0, 58%) minmax(0, 42%);
+  border-radius: 1.4rem;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.closeButton {
+  position: absolute;
+  right: 1.4rem;
+  top: 1.4rem;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.closeButton svg {
+  width: 16px;
+  height: 16px;
+  stroke: #fff;
+  stroke-width: 1.8;
+  fill: none;
+}
+
+.modalMedia {
+  position: relative;
+  background: #0b0b0b;
+  min-width: 0;
+}
+
+.mediaAsset {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.modalDetails {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 0;
+  border-left: 1px solid rgba(62, 62, 62, 0.16);
+}
+
+.detailsHeader {
+  border-bottom: 1px solid rgba(62, 62, 62, 0.16);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 2.2rem 2.4rem;
+  color: #212121;
+}
+
+.captionWrap {
+  padding: 2.4rem;
+  overflow-y: auto;
+}
+
+.captionText {
+  margin: 0;
+  white-space: pre-wrap;
+  color: #393939;
+  font-size: 1.72rem;
+  line-height: 1.5;
+}
+
+.viewLink {
+  margin-top: 1.8rem;
+  display: inline-block;
+  font-size: 1.55rem;
+  text-decoration: underline;
+}
+
+.postDate {
+  border-top: 1px solid rgba(62, 62, 62, 0.16);
+  color: rgba(62, 62, 62, 0.75);
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1.5rem;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.34);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navButtonLeft {
+  left: 1.2rem;
+}
+
+.navButtonRight {
+  right: 1.2rem;
+}
+
+.navButton svg {
+  width: 18px;
+  height: 18px;
+  stroke: #fff;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .overlay {
+    padding: 2.2rem 1.4rem;
+  }
+
+  .modal {
+    width: min(960px, calc(100vw - 2.8rem));
+    height: min(90vh, 820px);
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 54vh) minmax(0, 1fr);
+  }
+
+  .modalDetails {
+    border-left: 0;
+    border-top: 1px solid rgba(62, 62, 62, 0.16);
+  }
+
+  .detailsHeader {
+    font-size: 2.1rem;
+    padding: 1.8rem 2rem;
+  }
+
+  .captionText {
+    font-size: 1.65rem;
+  }
+
+  .viewLink {
+    font-size: 1.55rem;
+  }
+
+  .postDate {
+    font-size: 1.45rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 749px) {
+  .meta {
+    margin: 0.8rem 1.6rem 1.2rem;
+    font-size: 1.15rem;
+  }
+
+  .overlay {
+    padding: 1.2rem;
+  }
+
+  .modal {
+    width: calc(100vw - 2.4rem);
+    height: calc(100vh - 2.4rem);
+    border-radius: 1rem;
+    grid-template-rows: minmax(0, 48%) minmax(0, 1fr);
+  }
+
+  .captionWrap {
+    padding: 1.8rem;
+  }
+
+  .closeButton {
+    right: 1rem;
+    top: 1rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  .navButton {
+    display: none;
+  }
+}
