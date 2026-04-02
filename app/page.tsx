@@ -175,7 +175,7 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <InstagramFeed limit={10} accountHandle="westcoastbeauty.co" />
+          <InstagramFeed />
         </ScrollReveal>
       </main>
 
