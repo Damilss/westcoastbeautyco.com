@@ -1,3 +1,10 @@
+# ⚠️ Deprecated: Meta Instagram Feed Integration
+
+This implementation has been replaced by a third-party embed solution (Behold).
+
+See:
+docs/instagram-third-party-embed-migration.md
+
 # Instagram Feed Integration
 
 This document covers the Instagram feed implementation added to the landing page bottom section.
