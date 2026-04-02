@@ -4,72 +4,88 @@ This is a Next.js website for West Coast Beauty Co., a beauty and wellness brand
 
 ## Documentation
 
-- [Instagram Feed Integration](./docs/instagram-feed.md)
-
-## Repository Structure
-
-```
-.
-├── app/                    # Next.js App Router pages and components
-│   ├── components/         # Reusable components
-│   ├── layout.tsx          # Root layout
-│   ├── page.tsx            # Home page
-│   ├── globals.css         # Global CSS
-│   └── page.module.css     # Home page specific CSS
-├── public/                 # Static assets
-│   └── favicon.ico         # Website favicon
-├── references/             # Reference materials
-│   └── working-site/       # Working site reference files
-├── package.json            # Project dependencies and scripts
-├── next.config.js          # Next.js configuration
-├── tsconfig.json           # TypeScript configuration
-├── tailwind.config.js      # Tailwind CSS configuration
-└── README.md               # This file
-```
-
-## Key Files
-
-- `app/page.tsx` - Main home page component
-- `app/layout.tsx` - Root layout component
-- `app/globals.css` - Global CSS styles
-- `references/working-site/` - Previous Shopify site files. 
+- Instagram Feed (Current): docs/instagram-third-party-embed-migration.md
+- Instagram Feed (Deprecated): docs/archive/instagram-meta-integration.md
 
 ## Getting Started
 
-1. First, install the dependencies:
-   ```bash
-   npm install
-   ```
+1. Install dependencies:
+```bash
+npm install
+```
 
-2. Run the development server:
-   ```bash
-   npm run dev
-   ```
+2. Run development server:
+```bash
+npm run dev
+```
 
-3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open:
+```
+http://localhost:3000
+```
 
 ## Available Scripts
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build the application for production
-- `npm run start` - Start the production server
-- `npm run lint` - Run ESLint for code quality checks
+- npm run dev — Start development server  
+- npm run build — Build for production  
+- npm run start — Start production server  
+- npm run lint — Run ESLint  
 
-## Instagram Feed Setup
+---
 
-The home page Instagram section is API-backed with an automatic local fallback.
+## Instagram Feed (Current Implementation)
 
-Detailed implementation and behavior docs:
-- `docs/instagram-feed.md`
+The Instagram section uses a **third-party embed (Behold)** instead of a custom API or Meta integration.
 
-1. Copy `.env.example` to `.env.local`
-2. Set:
-   - `INSTAGRAM_ACCESS_TOKEN`
-   - `INSTAGRAM_ACCOUNT_HANDLE` (defaults to `westcoastbeauty.co`)
-3. Optional:
-   - `INSTAGRAM_IG_USER_ID` (if your token flow needs an explicit IG user id)
-   - `INSTAGRAM_FEED_LIMIT` (default `10`, max `20`)
-   - `INSTAGRAM_CACHE_TTL_SECONDS` (default `1800`)
+### Key Characteristics
 
-Internal endpoint:
-- `GET /api/instagram/feed?limit=10`
+- No Meta Developer account required
+- No backend API route
+- No access tokens stored in this project
+- Feed is rendered via a client-side React component
+- Content is managed through the Behold dashboard
+
+### Setup
+
+1. Create a Behold account  
+2. Connect the client’s Instagram account  
+3. Create a feed in the Behold dashboard  
+4. Copy the `feedId`  
+
+5. Add to `.env.local`:
+
+```env
+NEXT_PUBLIC_BEHOLD_FEED_ID=your_feed_id_here
+```
+
+### Behavior
+
+- Feed renders automatically when `NEXT_PUBLIC_BEHOLD_FEED_ID` is set  
+- If missing, the section fails gracefully  
+
+---
+
+## Deprecated Instagram Implementation
+
+The previous implementation used:
+
+- Meta Instagram API
+- Server-side fetching and normalization
+- In-memory caching
+- Local fallback media
+- Internal API route (`/api/instagram/feed`)
+
+This has been **fully removed**.
+
+Reference:
+- docs/archive/instagram-meta-integration.md
+
+---
+
+## Notes
+
+- This project intentionally avoids Meta app setup and review complexity  
+- Instagram functionality is fully delegated to a third-party provider  
+- For more control in the future, consider:
+  - Behold JSON feed
+  - or a custom Meta API integration
