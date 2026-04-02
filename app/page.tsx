@@ -72,7 +72,7 @@ export default function Home() {
                 ))}
               </div>
               <a href="#" className={styles.shopNowButton}>
-                SHOP NOW
+                BOOK NOW
               </a>
             </div>
           </section>
