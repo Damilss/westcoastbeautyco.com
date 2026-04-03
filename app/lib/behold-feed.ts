@@ -3,6 +3,7 @@ export const DEFAULT_BEHOLD_FEED_URL = "https://feeds.behold.so/jidFIqDLkPBGRR83
 const DEFAULT_LIMIT = 10;
 const MAX_LIMIT = 20;
 const DEFAULT_USERNAME = "westcoastbeauty.co";
+export const CONFIGURED_TOTAL_POSTS = 228;
 
 type BeholdMediaType = "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
 
@@ -135,6 +136,10 @@ function normalizeWebsite(value: string | undefined): string | null {
   return nextValue ? nextValue : null;
 }
 
+function normalizePostsCount(posts: BeholdPost[]): number {
+  return Math.max(CONFIGURED_TOTAL_POSTS, posts.length);
+}
+
 function normalizePost(post: BeholdPost): InstagramFeedItem | null {
   if (!post.id) return null;
 
@@ -180,7 +185,7 @@ export async function fetchBeholdFeed(options?: {
     website: normalizeWebsite(payload.website),
     followersCount: normalizeCount(payload.followersCount),
     followsCount: normalizeCount(payload.followsCount),
-    postsCount: posts.length,
+    postsCount: normalizePostsCount(posts),
     profilePictureUrl: payload.profilePictureUrl ?? null,
     items: posts.map(normalizePost).filter((item): item is InstagramFeedItem => Boolean(item)).slice(0, limit),
   };
