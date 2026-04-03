@@ -42,6 +42,10 @@ type BeholdPost = {
 
 type BeholdFeedResponse = {
   username?: string;
+  biography?: string;
+  website?: string;
+  followersCount?: number;
+  followsCount?: number;
   profilePictureUrl?: string;
   posts?: BeholdPost[];
 };
@@ -58,6 +62,11 @@ export type InstagramFeedItem = {
 
 export type InstagramFeedPayload = {
   username: string;
+  biography: string;
+  website: string | null;
+  followersCount: number;
+  followsCount: number;
+  postsCount: number;
   profilePictureUrl: string | null;
   items: InstagramFeedItem[];
 };
@@ -88,21 +97,14 @@ function pickBestSizedImage(sizes: BeholdSizes | undefined): string | undefined 
 function normalizePreviewUrl(post: BeholdPost): string | null {
   if (post.mediaType === "CAROUSEL_ALBUM" && Array.isArray(post.children) && post.children.length > 0) {
     const firstChild = post.children[0];
-    return (
-      pickBestSizedImage(firstChild.sizes) ??
-      firstChild.mediaUrl ??
-      pickBestSizedImage(post.sizes) ??
-      post.thumbnailUrl ??
-      post.mediaUrl ??
-      null
-    );
+    return pickBestSizedImage(firstChild.sizes) ?? pickBestSizedImage(post.sizes) ?? null;
   }
 
   if (post.mediaType === "VIDEO") {
-    return pickBestSizedImage(post.sizes) ?? post.thumbnailUrl ?? post.mediaUrl ?? null;
+    return pickBestSizedImage(post.sizes) ?? null;
   }
 
-  return pickBestSizedImage(post.sizes) ?? post.mediaUrl ?? post.thumbnailUrl ?? null;
+  return pickBestSizedImage(post.sizes) ?? null;
 }
 
 function normalizeTimestamp(value: string | undefined): string {
@@ -118,6 +120,19 @@ function normalizeTimestamp(value: string | undefined): string {
 
 function normalizeCaption(post: BeholdPost): string {
   return (post.prunedCaption ?? post.caption ?? "").trim();
+}
+
+function normalizeCount(value: number | undefined): number {
+  if (!Number.isFinite(value)) {
+    return 0;
+  }
+
+  return Math.max(0, Math.trunc(value ?? 0));
+}
+
+function normalizeWebsite(value: string | undefined): string | null {
+  const nextValue = value?.trim();
+  return nextValue ? nextValue : null;
 }
 
 function normalizePost(post: BeholdPost): InstagramFeedItem | null {
@@ -161,6 +176,11 @@ export async function fetchBeholdFeed(options?: {
 
   return {
     username: (payload.username ?? DEFAULT_USERNAME).replace(/^@/, ""),
+    biography: (payload.biography ?? "").trim(),
+    website: normalizeWebsite(payload.website),
+    followersCount: normalizeCount(payload.followersCount),
+    followsCount: normalizeCount(payload.followsCount),
+    postsCount: posts.length,
     profilePictureUrl: payload.profilePictureUrl ?? null,
     items: posts.map(normalizePost).filter((item): item is InstagramFeedItem => Boolean(item)).slice(0, limit),
   };
