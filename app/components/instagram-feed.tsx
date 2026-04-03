@@ -185,16 +185,6 @@ export function InstagramFeed({
 
                 {profile.biography ? <p className={styles.bio}>{profile.biography}</p> : null}
 
-                {profile.website ? (
-                  <a
-                    href={profile.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.websiteLink}
-                  >
-                    {getWebsiteLabel(profile.website)}
-                  </a>
-                ) : null}
               </div>
 
               <p className={styles.status} aria-live="polite">
