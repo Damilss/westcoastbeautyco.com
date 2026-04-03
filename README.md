@@ -4,8 +4,8 @@ This is a Next.js website for West Coast Beauty Co., a beauty and wellness brand
 
 ## Documentation
 
-- Instagram Feed (Current): `docs/instagram-third-party-embed-migration.md`
-- Instagram Feed (Deprecated Note): `docs/instagram-feed.md`
+- Instagram Feed (Current): `docs/instagram-feed.md`
+- Instagram Feed (Archive): `docs/instagram-third-party-embed-migration.md`
 
 ## Getting Started
 
@@ -33,12 +33,10 @@ http://localhost:3000
 
 ## Instagram Feed
 
-The home page Instagram section uses a Behold embed via `@behold/react`.
+The homepage Instagram section renders from the public Behold JSON endpoint:
+- `https://feeds.behold.so/jidFIqDLkPBGRR83dk3E`
 
-Setup:
-1. Create/connect a feed in Behold.
-2. Set `NEXT_PUBLIC_BEHOLD_FEED_ID` in `.env.local`.
-
-Behavior:
-- If `NEXT_PUBLIC_BEHOLD_FEED_ID` is set, the feed renders on the home page.
-- If it is missing, the Instagram section is hidden.
+Notes:
+- No API keys are required.
+- No `.env` configuration is required for the feed.
+- The feed is fetched client-side in `app/components/instagram-feed.tsx`.
