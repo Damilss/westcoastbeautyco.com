@@ -4,20 +4,20 @@
 }
 
 .instagramSectionInner {
-  max-width: 1200px;
+  max-width: 1380px;
   margin: 0 auto;
 }
 
 .instagramSectionInner h2 {
   margin: 0;
   font-family: var(--font-heading-family);
-  font-size: clamp(3.2rem, 2.6vw, 4.8rem);
+  font-size: clamp(3.8rem, 2.9vw, 5.4rem);
   font-weight: 500;
 }
 
 .eyebrow {
   margin: 0 0 0.7rem;
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   font-weight: 700;
   letter-spacing: 0.17em;
   text-transform: uppercase;
@@ -26,27 +26,27 @@
 
 .instagramSubcopy {
   margin: 0.8rem 0 2rem;
-  font-size: 1.2rem;
+  font-size: 1.42rem;
   color: rgba(40, 40, 40, 0.75);
 }
 
 .desktopMockup {
   border: 1px solid var(--border);
-  border-radius: 2.2rem;
+  border-radius: 2.55rem;
   overflow: hidden;
   background: linear-gradient(180deg, #fbf7f2 0%, #efe7dd 100%);
   box-shadow: 0 24px 48px rgba(26, 22, 24, 0.14);
 }
 
 .chromeBar {
-  min-height: 58px;
+  min-height: 74px;
   border-bottom: 1px solid rgba(62, 62, 62, 0.24);
   background: rgba(245, 206, 216, 0.68);
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1.2rem;
-  padding: 0.8rem 1.2rem;
+  padding: 1.05rem 1.55rem;
 }
 
 .chromeDots {
@@ -77,7 +77,7 @@
 
 .chromeTitle {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   letter-spacing: 0.03em;
   color: rgba(48, 48, 48, 0.86);
   white-space: nowrap;
@@ -92,21 +92,21 @@
   border: 1px solid rgba(62, 62, 62, 0.42);
   border-radius: 999px;
   background: #fffdf9;
-  padding: 0.55rem 0.95rem;
-  font-size: 0.92rem;
+  padding: 0.64rem 1.08rem;
+  font-size: 1.04rem;
   white-space: nowrap;
 }
 
 .mockupBody {
   display: grid;
-  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
-  min-height: 560px;
+  grid-template-columns: minmax(276px, 368px) minmax(0, 1fr);
+  min-height: 644px;
 }
 
 .profilePanel {
   border-right: 1px solid rgba(62, 62, 62, 0.2);
   background: rgba(255, 255, 255, 0.58);
-  padding: 1.3rem;
+  padding: 1.5rem;
   display: grid;
   grid-template-rows: 1fr auto;
   gap: 1rem;
@@ -116,16 +116,16 @@
   border: 1px solid rgba(62, 62, 62, 0.2);
   border-radius: 1.4rem;
   background: rgba(255, 255, 255, 0.82);
-  padding: 1.2rem 1.1rem;
+  padding: 1.4rem 1.3rem;
 }
 
 .avatarWrap {
-  width: 108px;
-  height: 108px;
+  width: 124px;
+  height: 124px;
   border-radius: 999px;
   padding: 3px;
   background: linear-gradient(145deg, #d98d9f 0%, #e2cbb2 50%, #a98d8f 100%);
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .avatarImage,
@@ -148,7 +148,7 @@
 
 .handle {
   margin: 0;
-  font-size: 1.36rem;
+  font-size: 1.56rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -169,7 +169,7 @@
 
 .statGrid dt {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: rgba(62, 62, 62, 0.72);
@@ -177,14 +177,14 @@
 
 .statGrid dd {
   margin: 0.3rem 0 0;
-  font-size: 1.15rem;
+  font-size: 1.34rem;
   font-weight: 700;
 }
 
 .bio {
   margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.45;
+  font-size: 1.12rem;
+  line-height: 1.5;
   color: rgba(40, 40, 40, 0.9);
   white-space: pre-line;
 }
@@ -192,25 +192,25 @@
 .websiteLink {
   margin-top: 0.85rem;
   display: inline-block;
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   text-decoration: underline;
   color: #4b2f37;
 }
 
 .status {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   color: rgba(48, 48, 48, 0.68);
 }
 
 .feedPanel {
-  padding: 1.2rem;
+  padding: 1.38rem;
   background: rgba(243, 243, 241, 0.58);
 }
 
 .feedPanelLabel {
   margin: 0 0 0.9rem;
-  font-size: 0.95rem;
+  font-size: 1.06rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: rgba(40, 40, 40, 0.68);
@@ -219,14 +219,14 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.85rem;
+  gap: 0.98rem;
 }
 
 .card {
   position: relative;
   display: block;
   aspect-ratio: 1 / 1;
-  border-radius: 1.1rem;
+  border-radius: 1.26rem;
   overflow: hidden;
   border: 1px solid rgba(62, 62, 62, 0.2);
   background: #f1ece5;
@@ -240,8 +240,8 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 999px;
   background: rgba(20, 20, 20, 0.6);
   display: inline-flex;
@@ -250,8 +250,8 @@
 }
 
 .videoBadge svg {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   fill: #fff;
 }
 
@@ -260,8 +260,8 @@
   left: 8px;
   bottom: 8px;
   border-radius: 999px;
-  padding: 0.35rem 0.55rem;
-  font-size: 0.72rem;
+  padding: 0.48rem 0.78rem;
+  font-size: 0.84rem;
   color: #fff;
   background: rgba(20, 20, 20, 0.65);
 }
@@ -272,7 +272,7 @@
   min-height: 240px;
   display: grid;
   place-items: center;
-  font-size: 1rem;
+  font-size: 1.14rem;
   color: rgba(48, 48, 48, 0.72);
   background: rgba(255, 255, 255, 0.55);
 }
@@ -300,8 +300,8 @@
 
   .avatarWrap {
     margin-bottom: 0;
-    width: 88px;
-    height: 88px;
+    width: 101px;
+    height: 101px;
   }
 
   .statGrid {
