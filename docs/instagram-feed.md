@@ -41,3 +41,5 @@ Each rendered item is normalized from Behold `posts[]` and includes:
 - No `.env` configuration is required.
 - No internal API route is required.
 - If the endpoint fails, the section keeps layout and shows an unavailable status.
+- Total profile posts shown in the mockup use a manual counter in `app/lib/behold-feed.ts` (`CONFIGURED_TOTAL_POSTS`).
+- Update `CONFIGURED_TOTAL_POSTS` during regular content/site refreshes.
