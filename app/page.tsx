@@ -72,7 +72,7 @@ export default function Home() {
                 ))}
               </div>
               <a href="#" className={styles.shopNowButton}>
-                SHOP NOW
+                BOOK NOW
               </a>
             </div>
           </section>
@@ -175,7 +175,7 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <InstagramFeed limit={10} accountHandle="westcoastbeauty.co" />
+          <InstagramFeed />
         </ScrollReveal>
       </main>
 

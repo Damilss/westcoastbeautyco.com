@@ -41,7 +41,7 @@
 
 .brand {
   font-family: var(--font-heading-family);
-  font-size: 1.55rem;
+  font-size: 1.89rem;
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -57,7 +57,7 @@
 
 .navLink,
 .navLinkActive {
-  font-size: 1.35rem;
+  font-size: 1.65rem;
   color: rgba(62, 62, 62, 0.85);
   border-bottom: 1px solid transparent;
   padding-bottom: 0.2rem;
@@ -385,7 +385,7 @@
   }
 
   .brand {
-    font-size: 1.45rem;
+    font-size: 1.76rem;
   }
 
   .heroFrame {
