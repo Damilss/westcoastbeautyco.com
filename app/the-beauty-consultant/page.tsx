@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
-import { SITE_NAV_LINKS } from "../components/site-nav-links";
+import { BOOKSY_APPOINTMENT_URL, SITE_NAV_LINKS } from "../components/site-nav-links";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function BeautyConsultantPage() {
                 launching your first studio or looking to elevate your existing brand, The Beauty
                 Consultant offers the guidance and strategy to help you thrive.
               </p>
-              <a href="/contact" className={styles.button}>
+              <a href={BOOKSY_APPOINTMENT_URL} className={styles.button}>
                 BOOK NOW
               </a>
             </div>

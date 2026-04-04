@@ -2,7 +2,7 @@ import Image from "next/image";
 import { InstagramFeed } from "./components/instagram-feed";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
-import { SITE_NAV_LINKS } from "./components/site-nav-links";
+import { BOOKSY_APPOINTMENT_URL, SITE_NAV_LINKS } from "./components/site-nav-links";
 import { ScrollReveal } from "./components/scroll-reveal";
 import styles from "./page.module.css";
 
@@ -71,7 +71,7 @@ export default function Home() {
                   </article>
                 ))}
               </div>
-              <a href="#" className={styles.shopNowButton}>
+              <a href={BOOKSY_APPOINTMENT_URL} className={styles.shopNowButton}>
                 BOOK NOW
               </a>
             </div>
@@ -102,7 +102,7 @@ export default function Home() {
                   treatments like microneedling, PRP, chemical peels, and PRX Derm Perfexion, as
                   well as injectable services including B-12 shots, Botox, and dermal fillers.
                 </p>
-                <a href="#" className={styles.softButton}>
+                <a href={BOOKSY_APPOINTMENT_URL} className={styles.softButton}>
                   BOOK NOW
                 </a>
               </div>
@@ -138,7 +138,7 @@ export default function Home() {
                   Whether you&apos;re launching your first studio or looking to elevate your existing
                   brand, The Beauty Consultant offers the guidance and strategy to help you thrive.
                 </p>
-                <a href="/contact" className={styles.darkButton}>
+                <a href={BOOKSY_APPOINTMENT_URL} className={styles.darkButton}>
                   BOOK NOW
                 </a>
               </div>
@@ -167,7 +167,7 @@ export default function Home() {
                   </article>
                 ))}
               </div>
-              <a href="#" className={styles.softButton}>
+              <a href={BOOKSY_APPOINTMENT_URL} className={styles.softButton}>
                 BOOK NOW
               </a>
             </div>
