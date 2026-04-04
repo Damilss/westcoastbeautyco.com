@@ -20,7 +20,12 @@ export default function ContactPage() {
             To speak with our team call or text 707-633-3323, or fill out the following form.
           </p>
 
-          <form className={styles.form} action="#">
+          <form
+            className={styles.form}
+            action="mailto:Hello@westcoastbeautyco.com"
+            method="post"
+            encType="text/plain"
+          >
             <div className={styles.formRow}>
               <label htmlFor="contact-name" className={styles.srOnly}>
                 Name
