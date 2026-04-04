@@ -69,6 +69,26 @@
   cursor: pointer;
 }
 
+.submitButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.feedbackSuccess,
+.feedbackError {
+  margin: 1.4rem 0 0;
+  font-size: 1.45rem;
+  line-height: 1.45;
+}
+
+.feedbackSuccess {
+  color: #2f5f24;
+}
+
+.feedbackError {
+  color: #8f2f2f;
+}
+
 .srOnly {
   position: absolute;
   width: 1px;
