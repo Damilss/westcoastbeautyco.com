@@ -129,9 +129,6 @@ export function InstagramFeed({
       <div className={styles.instagramSectionInner}>
         <p className={styles.eyebrow}>Instagram</p>
         <h2 id="instagram-heading">Inside West Coast Beauty</h2>
-        <p className={styles.instagramSubcopy}>
-          A miniature desktop-style profile preview, styled to match the site.
-        </p>
 
         <article className={styles.desktopMockup} aria-label="Instagram profile preview">
           <header className={styles.chromeBar}>
