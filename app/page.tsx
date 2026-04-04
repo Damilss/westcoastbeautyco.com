@@ -114,7 +114,7 @@ export default function Home() {
           <section className={styles.roomSection}>
             <div className={styles.roomFrame}>
               <Image
-                src="/543A3020.jpg"
+                src="/IMG_5119.JPG"
                 alt="West Coast Beauty salon studio room"
                 fill
                 sizes="100vw"
