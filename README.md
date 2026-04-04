@@ -4,6 +4,7 @@ This is a Next.js website for West Coast Beauty Co., a beauty and wellness brand
 
 ## Documentation
 
+- Contact Form: `docs/contact-form.md`
 - Instagram Feed (Current): `docs/instagram-feed.md`
 - Instagram Feed (Archive): `docs/instagram-third-party-embed-migration.md`
 
@@ -30,6 +31,20 @@ http://localhost:3000
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+
+## Contact Form Email Delivery
+
+The contact form at `/contact` is sent server-side with Resend.
+
+For implementation details, see `docs/contact-form.md`.
+
+1. Create `.env.local` from `.env.example`.
+2. Set `RESEND_API_KEY` to your Resend API key.
+
+Current contact delivery settings:
+- To: `Hello@westcoastbeautyco.com`
+- From: `onboarding@resend.dev` (temporary onboarding sender)
+- Reply-To: submitter email
 
 ## Instagram Feed
 
