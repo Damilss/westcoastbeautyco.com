@@ -75,6 +75,45 @@ Fix:
 Note:
 - After changing `next.config.ts`, dev server restart is required.
 
+## BottleRock Page: Back Navigation Reveal Bug (Mini Doc)
+
+Date of issue/fix: April 7, 2026.
+
+### Symptom
+- On `/bottlerock`, navigating away and returning with browser Back sometimes showed only top/transition content.
+- Sections below the transition were hidden until a hard refresh.
+
+### Root cause
+- Content sections were wrapped in `ScrollReveal` (`whileInView` + `viewport.once` behavior).
+- Browser history restore (bfcache/back-forward state) did not reliably re-run reveal lifecycle for those sections.
+- Result: reveal wrappers could remain in hidden initial state on restore.
+
+### What we tried (and why rejected)
+1. Global `ScrollReveal` replay on `pageshow`:
+- Attempted key-based remount/replay after back-forward restore.
+- Rejected because it still produced inconsistent hidden states across browser restore paths.
+
+2. Global force-visible / popstate handling in `ScrollReveal`:
+- Attempted to force visible on restore events and session flags.
+- Rejected because behavior was still inconsistent and introduced global complexity.
+
+3. Global hard reload on back-forward:
+- Attempted one-time `window.location.reload()` on history restore.
+- Rejected as too invasive and still not reliable enough in this flow.
+
+### Final implemented fix (stable)
+- `/bottlerock` no longer depends on `ScrollReveal` for core content sections.
+- Removed `ScrollReveal` wrappers around BottleRock content blocks (beauty section, poster, lineup/video, closing section) so sections always render immediately.
+- Restored shared `app/components/scroll-reveal.tsx` to its clean baseline behavior to avoid global side effects.
+
+### Files involved
+- `app/bottlerock/page.tsx` (removed route-level reveal wrappers)
+- `app/components/scroll-reveal.tsx` (reverted to baseline shared implementation)
+
+### Tradeoff
+- BottleRock page no longer has scroll-triggered reveal animation for those blocks.
+- In exchange, back/forward navigation is reliable and content never stays hidden.
+
 ## Files Touched by This Work
 - `app/components/home-bottlerock-promo.tsx` (new)
 - `app/components/home-bottlerock-promo.module.css` (new)
