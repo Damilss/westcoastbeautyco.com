@@ -345,13 +345,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--charcoal);
 }
 
 .footerIcons svg {
   width: 18px;
   height: 18px;
-  stroke: none;
-  fill: var(--charcoal);
 }
 
 .legal {
