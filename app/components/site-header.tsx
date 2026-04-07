@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import styles from "../page.module.css";
 
 type NavLink = {
@@ -12,10 +13,18 @@ type NavLink = {
 type SiteHeaderProps = {
   links: NavLink[];
   activeHref?: string;
+  promoSlot?: ReactNode;
+  forceSolidBackground?: boolean;
 };
 
-export function SiteHeader({ links, activeHref }: SiteHeaderProps) {
+export function SiteHeader({
+  links,
+  activeHref,
+  promoSlot,
+  forceSolidBackground = false,
+}: SiteHeaderProps) {
   const [atTop, setAtTop] = useState(true);
+  const useSolidBackground = forceSolidBackground || !atTop;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +40,9 @@ export function SiteHeader({ links, activeHref }: SiteHeaderProps) {
   }, []);
 
   return (
-    <header className={`${styles.header} ${atTop ? styles.headerAtTop : styles.headerScrolled}`}>
+    <header
+      className={`${styles.header} ${useSolidBackground ? styles.headerScrolled : styles.headerAtTop}`}
+    >
       <div className={styles.headerInner}>
         <Link href="/" className={styles.brand}>
           West Coast Beauty Co
@@ -62,6 +73,7 @@ export function SiteHeader({ links, activeHref }: SiteHeaderProps) {
           <BagIcon />
         </div>
       </div>
+      {promoSlot ? <div className={styles.headerPromoSlot}>{promoSlot}</div> : null}
     </header>
   );
 }
