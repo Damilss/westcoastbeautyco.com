@@ -39,6 +39,19 @@
   gap: 24px;
 }
 
+.headerPromoSlot {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 39;
+  pointer-events: none;
+}
+
+.headerPromoSlot > * {
+  pointer-events: auto;
+}
+
 .brand {
   font-family: var(--font-heading-family);
   font-size: 1.89rem;

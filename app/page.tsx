@@ -1,8 +1,8 @@
 import Image from "next/image";
+import { HomeBottleRockPromo } from "./components/home-bottlerock-promo";
 import { InstagramFeed } from "./components/instagram-feed";
 import { SiteFooter } from "./components/site-footer";
-import { SiteHeader } from "./components/site-header";
-import { BOOKSY_APPOINTMENT_URL, SITE_NAV_LINKS } from "./components/site-nav-links";
+import { BOOKSY_APPOINTMENT_URL } from "./components/site-nav-links";
 import { ScrollReveal } from "./components/scroll-reveal";
 import styles from "./page.module.css";
 
@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <SiteHeader links={SITE_NAV_LINKS} activeHref="/" />
+      <HomeBottleRockPromo />
 
       <main>
         <section className={styles.heroSection}>
