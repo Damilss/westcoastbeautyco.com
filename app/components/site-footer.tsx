@@ -9,7 +9,7 @@ export function SiteFooter() {
         <a href="https://www.facebook.com/boujiebeautybyamber" aria-label="Facebook">
           <FacebookIcon />
         </a>
-        <a href="https://www.instagram.com/boujiebeautybenicia/" aria-label="Instagram">
+        <a href="https://www.instagram.com/westcoastbeauty.co/" aria-label="Instagram">
           <InstagramIcon />
         </a>
       </div>
