@@ -135,7 +135,7 @@ export default function BottleRockPage() {
               <div className={styles.videoShell}>
                 <div className={styles.videoFrame}>
                   <iframe
-                    src="https://www.youtube-nocookie.com/embed/lu7ZeNRr0TI?si=zGOPUoZwEj6H5n2O"
+                    src="https://www.youtube.com/embed/lu7ZeNRr0TI?rel=0&modestbranding=1&playsinline=1"
                     title="BottleRock lineup preview"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
