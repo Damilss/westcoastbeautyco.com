@@ -123,37 +123,39 @@ export default function BottleRockPage() {
 
         <section className={styles.expectSection} aria-label="What to expect and aftercare">
           <div className={styles.contentWrap}>
-            <div className={styles.expectAftercareGrid}>
-              <div className={styles.expectCard}>
-                <p className={styles.sectionEyebrow}>What To Expect</p>
-                <h2>A seamless, elevated experience</h2>
-                <ul className={styles.expectList}>
-                  <li>Guided jewelry selection</li>
-                  <li>Clean + professional piercing environment</li>
-                  <li>Expert placement + styling</li>
-                  <li>Festival-friendly aftercare included</li>
-                </ul>
+            <div className={styles.expectCluster}>
+              <div className={styles.expectAftercareGrid}>
+                <div className={styles.expectCard}>
+                  <p className={styles.sectionEyebrow}>What To Expect</p>
+                  <h2>A seamless, elevated experience</h2>
+                  <ul className={styles.expectList}>
+                    <li>Guided jewelry selection</li>
+                    <li>Clean + professional piercing environment</li>
+                    <li>Expert placement + styling</li>
+                    <li>Festival-friendly aftercare included</li>
+                  </ul>
+                </div>
+
+                <div className={styles.aftercareCard}>
+                  <p className={styles.sectionEyebrow}>Aftercare</p>
+                  <h2>Keep it clean. Keep it effortless.</h2>
+                  <p className={styles.aftercareCopy}>
+                    Each client receives festival-friendly aftercare to make healing easy while you
+                    enjoy your weekend.
+                  </p>
+                  <p className={styles.aftercareCopy}>
+                    For continued care and future jewelry upgrades, visit us in studio after the
+                    festival.
+                  </p>
+                </div>
               </div>
 
-              <div className={styles.aftercareCard}>
-                <p className={styles.sectionEyebrow}>Aftercare</p>
-                <h2>Keep it clean. Keep it effortless.</h2>
-                <p className={styles.aftercareCopy}>
-                  Each client receives festival-friendly aftercare to make healing easy while you
-                  enjoy your weekend.
-                </p>
-                <p className={styles.aftercareCopy}>
-                  For continued care and future jewelry upgrades, visit us in studio after the
-                  festival.
+              <div className={styles.expectGoalCard}>
+                <p className={styles.expectGoalLabel}>Our goal is simple:</p>
+                <p className={styles.expectGoal}>
+                  To make you feel confident, styled, and taken care of.
                 </p>
               </div>
-            </div>
-
-            <div className={styles.expectGoalCard}>
-              <p className={styles.expectGoalLabel}>Our goal is simple:</p>
-              <p className={styles.expectGoal}>
-                To make you feel confident, styled, and taken care of.
-              </p>
             </div>
           </div>
         </section>

@@ -336,6 +336,12 @@
   background: var(--background);
 }
 
+.expectCluster {
+  border: 1px solid var(--border);
+  background: #e7ddd1;
+  padding: 1.2rem;
+}
+
 .expectAftercareGrid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -597,6 +603,7 @@
   }
 
   .lineupCopy,
+  .expectCluster,
   .expectCard,
   .expectGoalCard,
   .aftercareCard,
@@ -679,6 +686,7 @@
   .lineupCopy,
   .videoShell,
   .menuPanel,
+  .expectCluster,
   .expectCard,
   .expectGoalCard,
   .aftercareCard,
