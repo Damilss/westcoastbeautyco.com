@@ -330,6 +330,53 @@
   text-underline-offset: 0.22rem;
 }
 
+.faqSection {
+  padding: 5.4rem 2.4rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.faqCard {
+  border: 1px solid var(--border);
+  background: var(--cream);
+  padding: 4.4rem 4rem;
+}
+
+.faqCard h2 {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(3.4rem, 3.2vw, 5.2rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.04;
+}
+
+.faqList {
+  margin: 2.2rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.faqItem {
+  border: 1px solid var(--border);
+  background: #eee6dc;
+  padding: 2rem 2.2rem;
+}
+
+.faqQuestion {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(2.4rem, 2.2vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.faqAnswer {
+  margin: 1rem 0 0;
+  font-size: 1.72rem;
+  line-height: 1.56;
+  color: rgba(62, 62, 62, 0.9);
+}
+
 .closingSection {
   padding: 5.4rem 2.4rem;
   border-bottom: 1px solid var(--border);
@@ -450,6 +497,7 @@
   .posterSection,
   .lineupSection,
   .beautySection,
+  .faqSection,
   .closingSection {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -462,6 +510,7 @@
   }
 
   .lineupCopy,
+  .faqCard,
   .servicesPanel,
   .closingContent {
     padding: 3.2rem 2.4rem;
@@ -487,6 +536,7 @@
   .posterSection,
   .lineupSection,
   .beautySection,
+  .faqSection,
   .closingSection {
     padding-left: 1.6rem;
     padding-right: 1.6rem;
@@ -505,6 +555,7 @@
   .lineupCopy > p:not(.sectionEyebrow),
   .narrativeLead,
   .narrativeCopy,
+  .faqAnswer,
   .closingContent > p:not(.sectionEyebrow) {
     font-size: 1.62rem;
   }
@@ -534,9 +585,14 @@
   .lineupCopy,
   .videoShell,
   .menuPanel,
+  .faqCard,
   .servicesPanel,
   .closingContent {
     padding: 2.2rem 1.8rem;
+  }
+
+  .faqQuestion {
+    font-size: clamp(2.7rem, 8vw, 3.2rem);
   }
 
   .menuImageWrap {

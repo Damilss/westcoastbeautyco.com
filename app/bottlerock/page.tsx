@@ -11,6 +11,26 @@ export const metadata: Metadata = {
     "BottleRock-ready curated piercing services, lineup details, and booking for West Coast Beauty Co.",
 };
 
+const BOTTLE_ROCK_FAQS = [
+  {
+    question: "Do I need an appointment?",
+    answer:
+      "Appointments are highly recommended. Walk-ups are welcome based on availability.",
+  },
+  {
+    question: "What jewelry options are available?",
+    answer: "We offer high-quality titanium and gold options curated to your style.",
+  },
+  {
+    question: "How long does it take?",
+    answer: "Most services take 10-20 minutes depending on your selection.",
+  },
+  {
+    question: "Is aftercare included?",
+    answer: "Yes. Festival-friendly aftercare is included with your service.",
+  },
+] as const;
+
 export default function BottleRockPage() {
   return (
     <div className={styles.page}>
@@ -144,6 +164,23 @@ export default function BottleRockPage() {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.faqSection} aria-label="BottleRock FAQ">
+          <div className={styles.contentWrap}>
+            <div className={styles.faqCard}>
+              <p className={styles.sectionEyebrow}>FAQ</p>
+              <h2>BottleRock Beauty Bar questions, answered.</h2>
+              <dl className={styles.faqList}>
+                {BOTTLE_ROCK_FAQS.map((faq) => (
+                  <div key={faq.question} className={styles.faqItem}>
+                    <dt className={styles.faqQuestion}>{faq.question}</dt>
+                    <dd className={styles.faqAnswer}>{faq.answer}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </section>
