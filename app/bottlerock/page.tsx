@@ -5,40 +5,10 @@ import { SiteHeader } from "../components/site-header";
 import { BOOKSY_APPOINTMENT_URL, SITE_NAV_LINKS } from "../components/site-nav-links";
 import styles from "./page.module.css";
 
-type ServiceItem = {
-  title: string;
-  price: string;
-  description: string;
-};
-
-const FESTIVAL_SERVICES: ServiceItem[] = [
-  {
-    title: "Signature Stack",
-    price: "$305",
-    description:
-      "Two piercings with gold jewelry, fully curated and elevated styling included.",
-  },
-  {
-    title: "Curated Stack",
-    price: "$265",
-    description: "Two piercings with titanium jewelry for a clean, simple, styled finish.",
-  },
-  {
-    title: "Titanium Piercing",
-    price: "$135",
-    description: "Single piercing service with titanium jewelry.",
-  },
-  {
-    title: "Gold Piercing",
-    price: "$175",
-    description: "Single piercing service with gold jewelry.",
-  },
-];
-
 export const metadata: Metadata = {
   title: "BottleRock | West Coast Beauty Co.",
   description:
-    "BottleRock-ready beauty services, lineup details, and booking for West Coast Beauty Co.",
+    "BottleRock-ready curated piercing services, lineup details, and booking for West Coast Beauty Co.",
 };
 
 export default function BottleRockPage() {
@@ -63,10 +33,10 @@ export default function BottleRockPage() {
             <div className={styles.heroContentWrap}>
               <div className={styles.heroContent}>
                 <p className={styles.heroEyebrow}>BottleRock Beauty Weekend</p>
-                <h1>Festival-ready beauty, booked before the first set starts.</h1>
+                <h1>Festival-ready, fully curated. Book before the first set starts.</h1>
                 <p>
-                  West Coast Beauty Co. is bringing polished, photo-ready beauty services to the
-                  BottleRock energy all weekend long.
+                  West Coast Beauty Co. is bringing luxury piercing and curated ear styling to 
+                  BottleRock all weekend long.
                 </p>
                 <div className={styles.heroActions}>
                   <a href={BOOKSY_APPOINTMENT_URL} className={styles.primaryButton}>
@@ -103,28 +73,27 @@ export default function BottleRockPage() {
               </div>
 
               <div className={styles.servicesPanel}>
-                <p className={styles.sectionEyebrow}>Client Beauty Lineup</p>
-                <h2>Services built for festival days and Napa nights.</h2>
-                <p className={styles.servicesIntro}>BottleRock Beauty Bar offerings and pricing:</p>
-
-                <ul className={styles.serviceList}>
-                  {FESTIVAL_SERVICES.map((service) => (
-                    <li key={service.title} className={styles.serviceItem}>
-                      <div className={styles.serviceHeaderRow}>
-                        <h3>{service.title}</h3>
-                        <span>{service.price}</span>
-                      </div>
-                      <p>{service.description}</p>
-                    </li>
-                  ))}
-                </ul>
+                <p className={styles.sectionEyebrow}>BottleRock Beauty Bar</p>
+                <h2>Luxury piercing and ear curation, designed for your festival look.</h2>
+                <p className={styles.narrativeLead}>
+                  Step into BottleRock fully styled with West Coast Beauty Co.&apos;s luxury
+                  piercing and ear curation experience. From single piercings to curated ear stacks,
+                  each service is designed to complement your look using high-quality titanium and
+                  gold jewelry, expert placement, and a seamless, elevated experience.
+                </p>
+                <p className={styles.narrativeCopy}>
+                  Choose from a single piercing or elevate your look with a curated or signature
+                  stack - our most popular option for a fully styled, festival-ready finish.
+                  Appointments are limited and fill quickly, so reserve your spot in advance and
+                  arrive ready to enjoy the weekend.
+                </p>
 
                 <div className={styles.servicesActions}>
                   <a href={BOOKSY_APPOINTMENT_URL} className={styles.primaryButton}>
-                    Book Beauty Services
+                    Reserve your piercing
                   </a>
                   <a href="/contact" className={styles.inlineLink}>
-                    Jewelry is selected prior to service. Questions? Contact our team.
+                    Questions? Contact our team.
                   </a>
                 </div>
               </div>
@@ -155,7 +124,7 @@ export default function BottleRockPage() {
                 <p className={styles.sectionEyebrow}>Weekend Preview</p>
                 <h2>From lineup favorites to sunset sets, arrive ready.</h2>
                 <p>
-                  Plan your look before gates open. Watch the BottleRock preview, lock in your
+                  Plan your piercing before gates open. Watch the BottleRock preview, lock in your
                   appointment time, and head into the weekend feeling elevated.
                 </p>
                 <a href={BOOKSY_APPOINTMENT_URL} className={styles.primaryButton}>
@@ -185,7 +154,7 @@ export default function BottleRockPage() {
               <div className={styles.closingImages}>
                 <div className={styles.mainClosingImage}>
                   <Image
-                    src="/stephencurrybottlerock.jpg"
+                    src="/BR25_Fri_C Helkey_0008829-drone.JPEG"
                     alt="Festival crowd celebrating at BottleRock"
                     fill
                     sizes="(max-width: 1100px) 100vw, 52vw"
@@ -196,7 +165,7 @@ export default function BottleRockPage() {
 
               <div className={styles.closingContent}>
                 <p className={styles.sectionEyebrow}>Last Call</p>
-                <h2>Secure your BottleRock beauty appointment now.</h2>
+                <h2>Secure your BottleRock piercing appointment now.</h2>
                 <p>
                   Prime slots fill quickly during festival weekend. Reserve your service now and
                   step into BottleRock with your full look handled.
@@ -206,7 +175,7 @@ export default function BottleRockPage() {
                     Book Now
                   </a>
                   <a href="/contact" className={styles.secondaryButton}>
-                    Contact Team
+                    Contact Team  
                   </a>
                 </div>
               </div>

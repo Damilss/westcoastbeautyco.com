@@ -207,13 +207,18 @@
   line-height: 1;
 }
 
-.lineupCopy p,
-.servicesPanel p,
-.serviceItem p,
-.closingContent p {
+.lineupCopy > p:not(.sectionEyebrow),
+.narrativeLead,
+.narrativeCopy {
   font-size: 1.78rem;
   line-height: 1.58;
   color: rgba(62, 62, 62, 0.88);
+}
+
+.closingContent > p:not(.sectionEyebrow) {
+  font-size: 1.78rem;
+  line-height: 1.58;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .lineupCopy > p {
@@ -273,8 +278,8 @@
 
 .beautyGrid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
 }
 
 .menuPanel {
@@ -285,7 +290,9 @@
 
 .menuImageWrap {
   position: relative;
-  width: 100%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   aspect-ratio: 1080 / 1350;
 }
 
@@ -293,56 +300,23 @@
   border: 1px solid var(--border);
   background: var(--cream);
   padding: 4rem;
-}
-
-.servicesIntro {
-  margin: 1.8rem 0 0;
-}
-
-.serviceList {
-  margin: 2.4rem 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 1rem;
-}
-
-.serviceItem {
-  border: 1px solid rgba(62, 62, 62, 0.32);
-  background: rgba(255, 255, 255, 0.34);
-  padding: 1.6rem;
-}
-
-.serviceHeaderRow {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.4rem;
 }
 
-.serviceHeaderRow h3 {
+.servicesPanel h2 {
+  max-width: 15ch;
+}
+
+.narrativeLead,
+.narrativeCopy {
   margin: 0;
-  font-family: var(--font-heading-family);
-  font-size: clamp(2.6rem, 2.8vw, 3.4rem);
-  font-weight: 400;
-  letter-spacing: 0.008em;
-  line-height: 1;
-}
-
-.serviceHeaderRow span {
-  font-size: 1.3rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(62, 62, 62, 0.74);
-}
-
-.serviceItem p {
-  margin: 1rem 0 0;
-  font-size: 1.55rem;
 }
 
 .servicesActions {
-  margin-top: 2.6rem;
+  margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -528,10 +502,10 @@
   }
 
   .heroContent p,
-  .lineupCopy p,
-  .servicesPanel p,
-  .serviceItem p,
-  .closingContent p {
+  .lineupCopy > p:not(.sectionEyebrow),
+  .narrativeLead,
+  .narrativeCopy,
+  .closingContent > p:not(.sectionEyebrow) {
     font-size: 1.62rem;
   }
 
@@ -563,6 +537,10 @@
   .servicesPanel,
   .closingContent {
     padding: 2.2rem 1.8rem;
+  }
+
+  .menuImageWrap {
+    width: 100%;
   }
 
   .servicesActions {
