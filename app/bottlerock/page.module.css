@@ -330,6 +330,91 @@
   text-underline-offset: 0.22rem;
 }
 
+.expectSection {
+  padding: 4.2rem 2.4rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.expectAftercareGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.4rem;
+}
+
+.expectCard {
+  border: 1px solid var(--border);
+  background: var(--cream);
+  padding: 3.8rem 4rem;
+}
+
+.expectCard h2 {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(3.2rem, 3vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+.expectList {
+  margin: 1.8rem 0 0;
+  padding-left: 2rem;
+  display: grid;
+  gap: 0.8rem;
+  font-size: 1.72rem;
+  line-height: 1.5;
+  color: rgba(62, 62, 62, 0.92);
+}
+
+.expectGoalLabel {
+  margin: 2rem 0 0;
+  font-size: 1.74rem;
+  line-height: 1.5;
+  color: rgba(62, 62, 62, 0.9);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.expectGoal {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(2.6rem, 2.8vw, 3.8rem);
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  color: rgba(50, 50, 50, 0.96);
+}
+
+.expectGoalCard {
+  margin-top: 1.4rem;
+  border: 1px solid var(--border);
+  background: #e6dbcd;
+  padding: 3rem 3.8rem;
+}
+
+.aftercareCard {
+  border: 1px solid var(--border);
+  background: #e9dfd3;
+  padding: 3.6rem 3.8rem;
+}
+
+.aftercareCard h2 {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(3.2rem, 3vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.04;
+}
+
+.aftercareCopy {
+  margin: 1.4rem 0 0;
+  font-size: 1.74rem;
+  line-height: 1.56;
+  color: rgba(62, 62, 62, 0.9);
+}
+
 .faqSection {
   padding: 5.4rem 2.4rem;
   border-bottom: 1px solid var(--border);
@@ -497,6 +582,7 @@
   .posterSection,
   .lineupSection,
   .beautySection,
+  .expectSection,
   .faqSection,
   .closingSection {
     padding-left: 2rem;
@@ -504,12 +590,16 @@
   }
 
   .lineupGrid,
+  .expectAftercareGrid,
   .beautyGrid,
   .closingCard {
     grid-template-columns: 1fr;
   }
 
   .lineupCopy,
+  .expectCard,
+  .expectGoalCard,
+  .aftercareCard,
   .faqCard,
   .servicesPanel,
   .closingContent {
@@ -536,6 +626,7 @@
   .posterSection,
   .lineupSection,
   .beautySection,
+  .expectSection,
   .faqSection,
   .closingSection {
     padding-left: 1.6rem;
@@ -555,6 +646,9 @@
   .lineupCopy > p:not(.sectionEyebrow),
   .narrativeLead,
   .narrativeCopy,
+  .expectList,
+  .expectGoalLabel,
+  .aftercareCopy,
   .faqAnswer,
   .closingContent > p:not(.sectionEyebrow) {
     font-size: 1.62rem;
@@ -585,10 +679,17 @@
   .lineupCopy,
   .videoShell,
   .menuPanel,
+  .expectCard,
+  .expectGoalCard,
+  .aftercareCard,
   .faqCard,
   .servicesPanel,
   .closingContent {
     padding: 2.2rem 1.8rem;
+  }
+
+  .expectGoal {
+    font-size: clamp(2.8rem, 8vw, 3.4rem);
   }
 
   .faqQuestion {
