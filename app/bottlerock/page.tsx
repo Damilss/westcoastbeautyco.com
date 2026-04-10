@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import {
+  type BottleRockConversationOption,
+  BottleRockTextingDemo,
+} from "../components/bottlerock-texting-demo";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
 import { BOOKSY_APPOINTMENT_URL, SITE_NAV_LINKS } from "../components/site-nav-links";
@@ -30,6 +34,60 @@ const BOTTLE_ROCK_FAQS = [
     answer: "Yes. Festival-friendly aftercare is included with your service.",
   },
 ] as const;
+
+const BOTTLE_ROCK_FAQ_OPTIONS: readonly BottleRockConversationOption[] = BOTTLE_ROCK_FAQS.map(
+  (faq, index) => ({
+    id: `faq-${index + 1}`,
+    userLabel: faq.question,
+    userMessage: faq.question,
+    botResponse: faq.answer,
+  })
+);
+
+const BOTTLE_ROCK_EXTRA_PROMPT_OPTIONS: readonly BottleRockConversationOption[] = [
+  {
+    id: "walk-ups",
+    userLabel: "Do you take walk-ups?",
+    userMessage: "Hi! Do you take walk-ups at BottleRock?",
+    botResponse:
+      "Yes, we do when space opens up. We always recommend booking ahead for your preferred time.",
+  },
+  {
+    id: "timing-detail",
+    userLabel: "How long does it take?",
+    userMessage: "How long is a typical piercing appointment?",
+    botResponse:
+      "Most appointments are about 10-20 minutes, depending on your service and jewelry selection.",
+    responseDelayMs: 1400,
+  },
+  {
+    id: "jewelry-detail",
+    userLabel: "What jewelry options?",
+    userMessage: "What jewelry do you have available this weekend?",
+    botResponse:
+      "We offer curated titanium and solid gold options that are festival-ready and selected to match your look.",
+  },
+  {
+    id: "group-booking",
+    userLabel: "Can we book together?",
+    userMessage: "Can I reserve spots for me and my friends together?",
+    botResponse:
+      "Absolutely. Book back-to-back times and we can style your group in one coordinated session.",
+  },
+  {
+    id: "location",
+    userLabel: "Where will West Coast Beauty Co. be located?",
+    userMessage: "Where will West Coast Beauty Co. be located?",
+    botResponse:
+      "Find us inside the BottleRock Beauty Bar. Exact location details will be available on the festival map inside the event.",
+    responseDelayMs: 1520,
+  },
+];
+
+const BOTTLE_ROCK_FAQ_DEMO_OPTIONS: readonly BottleRockConversationOption[] = [
+  ...BOTTLE_ROCK_FAQ_OPTIONS,
+  ...BOTTLE_ROCK_EXTRA_PROMPT_OPTIONS,
+];
 
 export default function BottleRockPage() {
   return (
@@ -187,7 +245,7 @@ export default function BottleRockPage() {
                   appointment time, and head into the weekend feeling elevated.
                 </p>
                 <a href={BOOKSY_APPOINTMENT_URL} className={styles.primaryButton}>
-                  Reserve Festival Appointment
+                  Reserve Piercing Appointment
                 </a>
               </div>
 
@@ -212,14 +270,13 @@ export default function BottleRockPage() {
             <div className={styles.faqCard}>
               <p className={styles.sectionEyebrow}>FAQ</p>
               <h2>BottleRock Beauty Bar questions, answered.</h2>
-              <dl className={styles.faqList}>
-                {BOTTLE_ROCK_FAQS.map((faq) => (
-                  <div key={faq.question} className={styles.faqItem}>
-                    <dt className={styles.faqQuestion}>{faq.question}</dt>
-                    <dd className={styles.faqAnswer}>{faq.answer}</dd>
-                  </div>
-                ))}
-              </dl>
+              <div className={styles.faqDemoWrap}>
+                <BottleRockTextingDemo
+                  bookingUrl={BOOKSY_APPOINTMENT_URL}
+                  contactUrl="/contact"
+                  conversationOptions={BOTTLE_ROCK_FAQ_DEMO_OPTIONS}
+                />
+              </div>
             </div>
           </div>
         </section>
