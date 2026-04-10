@@ -340,10 +340,37 @@
   background: var(--background);
 }
 
+.expectSection .contentWrap {
+  max-width: 1240px;
+}
+
 .expectCluster {
   border: 1px solid var(--border);
   background: #e7ddd1;
   padding: 1.2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.4rem;
+  align-items: stretch;
+}
+
+.expectImagePanel {
+  border: 1px solid var(--border);
+  background: #eee4d8;
+  padding: 1rem;
+}
+
+.expectImageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+}
+
+.expectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 
 .expectAftercareGrid {
@@ -397,7 +424,6 @@
 }
 
 .expectGoalCard {
-  margin-top: 1.4rem;
   border: 1px solid var(--border);
   background: #e6dbcd;
   padding: 3rem 3.8rem;
@@ -583,6 +609,7 @@
   }
 
   .lineupGrid,
+  .expectCluster,
   .expectAftercareGrid,
   .beautyGrid,
   .closingCard {
@@ -608,6 +635,10 @@
     min-height: 420px;
     border-right: 0;
     border-bottom: 1px solid var(--border);
+  }
+
+  .expectImageWrap {
+    min-height: 420px;
   }
 }
 
@@ -705,5 +736,9 @@
 
   .closingImages {
     min-height: 330px;
+  }
+
+  .expectImageWrap {
+    min-height: 300px;
   }
 }
