@@ -64,7 +64,7 @@ The phone UI is intentionally iPhone-inspired (not a full messenger clone):
 - Top hardware detail: Dynamic Island-like pill + lens accent.
 - Header controls:
   - Back chip with `17`
-  - Center avatar using `/public/logo.png`
+  - Center avatar using `/logo.png`
   - FaceTime-style icon on the right
 - Thread:
   - Outgoing (user): iOS blue bubbles
