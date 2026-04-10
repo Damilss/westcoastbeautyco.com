@@ -84,7 +84,7 @@ Below the phone:
 - Uses existing stack only:
   - Next.js App Router
   - Tailwind CSS utility classes
-  - Framer Motion via `motion/react`
+  - Motion React via `motion/react`
 - No chat library added.
 - No typewriter library added.
 - No backend required for simulation.
