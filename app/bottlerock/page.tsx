@@ -54,7 +54,7 @@ const BOTTLE_ROCK_EXTRA_PROMPT_OPTIONS: readonly BottleRockConversationOption[] 
   },
   {
     id: "timing-detail",
-    userLabel: "How long does it take?",
+    userLabel: "How long does an appointment take?",
     userMessage: "How long is a typical piercing appointment?",
     botResponse:
       "Most appointments are about 10-20 minutes, depending on your service and jewelry selection.",
@@ -308,7 +308,7 @@ export default function BottleRockPage() {
                     Book Now
                   </a>
                   <a href="/contact" className={styles.secondaryButton}>
-                    Contact Team  
+                    Contact Team
                   </a>
                 </div>
               </div>
