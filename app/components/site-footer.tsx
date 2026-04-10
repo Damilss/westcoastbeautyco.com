@@ -4,12 +4,12 @@ export function SiteFooter() {
   return (
     <footer className={styles.footer}>
       <p>Want to chat with our team? Call or Text</p>
-      <p className={styles.phone}>707-633-3323</p>
+      <p className={styles.phone}>707-590-0494</p>
       <div className={styles.footerIcons}>
         <a href="https://www.facebook.com/boujiebeautybyamber" aria-label="Facebook">
           <FacebookIcon />
         </a>
-        <a href="https://www.instagram.com/boujiebeautybenicia/" aria-label="Instagram">
+        <a href="https://www.instagram.com/westcoastbeauty.co/" aria-label="Instagram">
           <InstagramIcon />
         </a>
       </div>

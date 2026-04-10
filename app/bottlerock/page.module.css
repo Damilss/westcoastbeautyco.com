@@ -3,6 +3,10 @@
   color: var(--foreground);
 }
 
+:global(html) {
+  scroll-behavior: smooth;
+}
+
 .main {
   border-top: 1px solid transparent;
 }
@@ -207,13 +211,18 @@
   line-height: 1;
 }
 
-.lineupCopy p,
-.servicesPanel p,
-.serviceItem p,
-.closingContent p {
+.lineupCopy > p:not(.sectionEyebrow),
+.narrativeLead,
+.narrativeCopy {
   font-size: 1.78rem;
   line-height: 1.58;
   color: rgba(62, 62, 62, 0.88);
+}
+
+.closingContent > p:not(.sectionEyebrow) {
+  font-size: 1.78rem;
+  line-height: 1.58;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .lineupCopy > p {
@@ -273,8 +282,8 @@
 
 .beautyGrid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
 }
 
 .menuPanel {
@@ -285,7 +294,9 @@
 
 .menuImageWrap {
   position: relative;
-  width: 100%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   aspect-ratio: 1080 / 1350;
 }
 
@@ -293,56 +304,23 @@
   border: 1px solid var(--border);
   background: var(--cream);
   padding: 4rem;
-}
-
-.servicesIntro {
-  margin: 1.8rem 0 0;
-}
-
-.serviceList {
-  margin: 2.4rem 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 1rem;
-}
-
-.serviceItem {
-  border: 1px solid rgba(62, 62, 62, 0.32);
-  background: rgba(255, 255, 255, 0.34);
-  padding: 1.6rem;
-}
-
-.serviceHeaderRow {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.4rem;
 }
 
-.serviceHeaderRow h3 {
+.servicesPanel h2 {
+  max-width: 15ch;
+}
+
+.narrativeLead,
+.narrativeCopy {
   margin: 0;
-  font-family: var(--font-heading-family);
-  font-size: clamp(2.6rem, 2.8vw, 3.4rem);
-  font-weight: 400;
-  letter-spacing: 0.008em;
-  line-height: 1;
-}
-
-.serviceHeaderRow span {
-  font-size: 1.3rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(62, 62, 62, 0.74);
-}
-
-.serviceItem p {
-  margin: 1rem 0 0;
-  font-size: 1.55rem;
 }
 
 .servicesActions {
-  margin-top: 2.6rem;
+  margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -354,6 +332,127 @@
   color: rgba(62, 62, 62, 0.88);
   text-decoration: underline;
   text-underline-offset: 0.22rem;
+}
+
+.expectSection {
+  padding: 4.2rem 2.4rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.expectCluster {
+  border: 1px solid var(--border);
+  background: #e7ddd1;
+  padding: 1.2rem;
+}
+
+.expectAftercareGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.4rem;
+}
+
+.expectCard {
+  border: 1px solid var(--border);
+  background: var(--cream);
+  padding: 3.8rem 4rem;
+}
+
+.expectCard h2 {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(3.2rem, 3vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+.expectList {
+  margin: 1.8rem 0 0;
+  padding-left: 2rem;
+  display: grid;
+  gap: 0.8rem;
+  font-size: 1.72rem;
+  line-height: 1.5;
+  color: rgba(62, 62, 62, 0.92);
+}
+
+.expectGoalLabel {
+  margin: 2rem 0 0;
+  font-size: 1.74rem;
+  line-height: 1.5;
+  color: rgba(62, 62, 62, 0.9);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.expectGoal {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(2.6rem, 2.8vw, 3.8rem);
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  color: rgba(50, 50, 50, 0.96);
+}
+
+.expectGoalCard {
+  margin-top: 1.4rem;
+  border: 1px solid var(--border);
+  background: #e6dbcd;
+  padding: 3rem 3.8rem;
+}
+
+.aftercareCard {
+  border: 1px solid var(--border);
+  background: #e9dfd3;
+  padding: 3.6rem 3.8rem;
+}
+
+.aftercareCard h2 {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(3.2rem, 3vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.04;
+}
+
+.aftercareCopy {
+  margin: 1.4rem 0 0;
+  font-size: 1.74rem;
+  line-height: 1.56;
+  color: rgba(62, 62, 62, 0.9);
+}
+
+.faqSection {
+  padding: 5.4rem 2.4rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.faqCard {
+  border: 1px solid var(--border);
+  background: var(--cream);
+  padding: 4.8rem 4.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.faqCard h2 {
+  margin: 0;
+  font-family: var(--font-heading-family);
+  font-size: clamp(2.9rem, 2.8vw, 4.2rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.06;
+}
+
+.faqDemoWrap {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: center;
 }
 
 .closingSection {
@@ -476,18 +575,26 @@
   .posterSection,
   .lineupSection,
   .beautySection,
+  .expectSection,
+  .faqSection,
   .closingSection {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
   .lineupGrid,
+  .expectAftercareGrid,
   .beautyGrid,
   .closingCard {
     grid-template-columns: 1fr;
   }
 
   .lineupCopy,
+  .expectCluster,
+  .expectCard,
+  .expectGoalCard,
+  .aftercareCard,
+  .faqCard,
   .servicesPanel,
   .closingContent {
     padding: 3.2rem 2.4rem;
@@ -513,6 +620,8 @@
   .posterSection,
   .lineupSection,
   .beautySection,
+  .expectSection,
+  .faqSection,
   .closingSection {
     padding-left: 1.6rem;
     padding-right: 1.6rem;
@@ -528,10 +637,13 @@
   }
 
   .heroContent p,
-  .lineupCopy p,
-  .servicesPanel p,
-  .serviceItem p,
-  .closingContent p {
+  .lineupCopy > p:not(.sectionEyebrow),
+  .narrativeLead,
+  .narrativeCopy,
+  .expectList,
+  .expectGoalLabel,
+  .aftercareCopy,
+  .closingContent > p:not(.sectionEyebrow) {
     font-size: 1.62rem;
   }
 
@@ -560,9 +672,26 @@
   .lineupCopy,
   .videoShell,
   .menuPanel,
+  .expectCluster,
+  .expectCard,
+  .expectGoalCard,
+  .aftercareCard,
+  .faqCard,
   .servicesPanel,
   .closingContent {
     padding: 2.2rem 1.8rem;
+  }
+
+  .expectGoal {
+    font-size: clamp(2.8rem, 8vw, 3.4rem);
+  }
+
+  .faqCard h2 {
+    font-size: clamp(2.8rem, 7.8vw, 3.6rem);
+  }
+
+  .menuImageWrap {
+    width: 100%;
   }
 
   .servicesActions {
