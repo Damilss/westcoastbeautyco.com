@@ -9,7 +9,12 @@ import { SiteHeader } from "../components/site-header";
 import { SITE_NAV_LINKS } from "../components/site-nav-links";
 import styles from "./page.module.css";
 
-const BOTTLEROCK_BOOKING_URL= "https://westcoastbeautyco.as.me/";
+const BOTTLEROCK_BOOKING_URL = "https://westcoastbeautyco.as.me/";
+const BOTTLE_ROCK_SITE_NAV_LINKS = SITE_NAV_LINKS.map((link) =>
+  link.label === "Book appointment"
+    ? { ...link, href: BOTTLEROCK_BOOKING_URL }
+    : link
+);
 
 export const metadata: Metadata = {
   title: "BottleRock | West Coast Beauty Co.",
@@ -94,7 +99,7 @@ const BOTTLE_ROCK_FAQ_DEMO_OPTIONS: readonly BottleRockConversationOption[] = [
 export default function BottleRockPage() {
   return (
     <div className={styles.page}>
-      <SiteHeader links={SITE_NAV_LINKS} activeHref="/bottlerock" />
+      <SiteHeader links={BOTTLE_ROCK_SITE_NAV_LINKS} activeHref="/bottlerock" />
 
       <main className={styles.main}>
         <section className={styles.heroSection}>
