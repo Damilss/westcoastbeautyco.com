@@ -9,10 +9,10 @@ import { SiteHeader } from "../components/site-header";
 import { SITE_NAV_LINKS } from "../components/site-nav-links";
 import styles from "./page.module.css";
 
-const BOTTLEROCK_BOOKING_URL = "https://westcoastbeautyco.as.me/";
+const BOTTLE_ROCK_BOOKING_URL = "https://westcoastbeautyco.as.me/";
 const BOTTLE_ROCK_SITE_NAV_LINKS = SITE_NAV_LINKS.map((link) =>
   link.label === "Book appointment"
-    ? { ...link, href: BOTTLEROCK_BOOKING_URL }
+    ? { ...link, href: BOTTLE_ROCK_BOOKING_URL }
     : link
 );
 
