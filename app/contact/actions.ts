@@ -3,7 +3,7 @@
 import { Resend } from "resend";
 
 const CONTACT_EMAIL = "Hello@westcoastbeautyco.com";
-const CONTACT_FROM_EMAIL = "onboarding@resend.dev";
+const CONTACT_FROM_NAME = "West Coast Beauty Co";
 
 export type ContactFormState = {
   status: "idle" | "success" | "error";
@@ -64,6 +64,24 @@ export async function submitContactForm(
     };
   }
 
+  const resendFromEmail = sanitizeSingleLine(process.env.RESEND_FROM_EMAIL ?? "", 320).toLowerCase();
+  if (!resendFromEmail) {
+    return {
+      status: "error",
+      message:
+        "Contact form sender is not configured yet. Please call or text us at 707-633-3323.",
+    };
+  }
+
+  if (!isValidEmail(resendFromEmail)) {
+    console.error("Invalid RESEND_FROM_EMAIL value", { resendFromEmail });
+    return {
+      status: "error",
+      message:
+        "Contact form sender is misconfigured. Please call or text us at 707-633-3323.",
+    };
+  }
+
   const resend = new Resend(resendApiKey);
   const textBody = [
     "New contact form submission",
@@ -78,7 +96,7 @@ export async function submitContactForm(
 
   try {
     const result = await resend.emails.send({
-      from: `West Coast Beauty Co <${CONTACT_FROM_EMAIL}>`,
+      from: `${CONTACT_FROM_NAME} <${resendFromEmail}>`,
       to: [CONTACT_EMAIL],
       replyTo: email,
       subject: name ? `New contact form submission from ${name}` : "New contact form submission",

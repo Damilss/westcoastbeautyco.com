@@ -10,17 +10,19 @@ The contact page (`/contact`) uses a server action to send form submissions via 
 
 Current delivery settings:
 - To: `Hello@westcoastbeautyco.com`
-- From: `onboarding@resend.dev` (temporary sender)
+- From: `West Coast Beauty Co <${RESEND_FROM_EMAIL}>`
 - Reply-To: submitter email
 
 ## Environment
 
 Required:
 - `RESEND_API_KEY`
+- `RESEND_FROM_EMAIL` (sender address on a verified Resend domain)
 
 Setup:
 1. Copy `.env.example` to `.env.local`.
 2. Set `RESEND_API_KEY` in `.env.local`.
+3. Set `RESEND_FROM_EMAIL` in `.env.local`.
 
 ## Notes
 
