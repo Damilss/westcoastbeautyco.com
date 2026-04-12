@@ -6,8 +6,15 @@ import {
 } from "../components/bottlerock-texting-demo";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
-import { BOOKSY_APPOINTMENT_URL, SITE_NAV_LINKS } from "../components/site-nav-links";
+import { SITE_NAV_LINKS } from "../components/site-nav-links";
 import styles from "./page.module.css";
+
+const BOTTLE_ROCK_BOOKING_URL = "https://westcoastbeautyco.as.me/";
+const BOTTLE_ROCK_SITE_NAV_LINKS = SITE_NAV_LINKS.map((link) =>
+  link.label === "Book appointment"
+    ? { ...link, href: BOTTLE_ROCK_BOOKING_URL }
+    : link
+);
 
 export const metadata: Metadata = {
   title: "BottleRock | West Coast Beauty Co.",
@@ -92,7 +99,7 @@ const BOTTLE_ROCK_FAQ_DEMO_OPTIONS: readonly BottleRockConversationOption[] = [
 export default function BottleRockPage() {
   return (
     <div className={styles.page}>
-      <SiteHeader links={SITE_NAV_LINKS} activeHref="/bottlerock" />
+      <SiteHeader links={BOTTLE_ROCK_SITE_NAV_LINKS} activeHref="/bottlerock" />
 
       <main className={styles.main}>
         <section className={styles.heroSection}>
@@ -117,7 +124,7 @@ export default function BottleRockPage() {
                   BottleRock all weekend long.
                 </p>
                 <div className={styles.heroActions}>
-                  <a href={BOOKSY_APPOINTMENT_URL} className={styles.primaryButton}>
+                  <a href={BOTTLEROCK_BOOKING_URL} className={styles.primaryButton}>
                     Book Your Spot
                   </a>
                   <a href="#lineup" className={styles.secondaryButton}>
@@ -167,7 +174,7 @@ export default function BottleRockPage() {
                 </p>
 
                 <div className={styles.servicesActions}>
-                  <a href={BOOKSY_APPOINTMENT_URL} className={styles.primaryButton}>
+                  <a href={BOTTLEROCK_BOOKING_URL} className={styles.primaryButton}>
                     Reserve your piercing
                   </a>
                   <a href="/contact" className={styles.inlineLink}>
@@ -258,7 +265,7 @@ export default function BottleRockPage() {
                   Plan your piercing before gates open. Watch the BottleRock preview, lock in your
                   appointment time, and head into the weekend feeling elevated.
                 </p>
-                <a href={BOOKSY_APPOINTMENT_URL} className={styles.primaryButton}>
+                <a href={BOTTLEROCK_BOOKING_URL} className={styles.primaryButton}>
                   Reserve Piercing Appointment
                 </a>
               </div>
@@ -286,7 +293,7 @@ export default function BottleRockPage() {
               <h2>BottleRock Beauty Bar questions, answered.</h2>
               <div className={styles.faqDemoWrap}>
                 <BottleRockTextingDemo
-                  bookingUrl={BOOKSY_APPOINTMENT_URL}
+                  bookingUrl={BOTTLEROCK_BOOKING_URL}
                   contactUrl="/contact"
                   conversationOptions={BOTTLE_ROCK_FAQ_DEMO_OPTIONS}
                 />
@@ -318,7 +325,7 @@ export default function BottleRockPage() {
                   step into BottleRock with your full look handled.
                 </p>
                 <div className={styles.closingActions}>
-                  <a href={BOOKSY_APPOINTMENT_URL} className={styles.primaryButton}>
+                  <a href={BOTTLEROCK_BOOKING_URL} className={styles.primaryButton}>
                     Book Now
                   </a>
                   <a href="/contact" className={styles.secondaryButton}>

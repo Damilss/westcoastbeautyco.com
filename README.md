@@ -40,10 +40,11 @@ For implementation details, see `docs/contact-form.md`.
 
 1. Create `.env.local` from `.env.example`.
 2. Set `RESEND_API_KEY` to your Resend API key.
+3. Set `RESEND_FROM_EMAIL` to a sender address on your verified Resend domain.
 
 Current contact delivery settings:
 - To: `Hello@westcoastbeautyco.com`
-- From: `onboarding@resend.dev` (temporary onboarding sender)
+- From: `West Coast Beauty Co <${RESEND_FROM_EMAIL}>`
 - Reply-To: submitter email
 
 ## Instagram Feed
