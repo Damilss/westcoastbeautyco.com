@@ -3,7 +3,7 @@ export const DEFAULT_BEHOLD_FEED_URL = "https://feeds.behold.so/jidFIqDLkPBGRR83
 const DEFAULT_LIMIT = 10;
 const MAX_LIMIT = 20;
 const DEFAULT_USERNAME = "westcoastbeauty.co";
-export const CONFIGURED_TOTAL_POSTS = 230;
+export const CONFIGURED_TOTAL_POSTS = 231;
 
 type BeholdMediaType = "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
 
